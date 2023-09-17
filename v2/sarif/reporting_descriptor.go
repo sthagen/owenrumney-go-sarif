@@ -8,8 +8,12 @@ type ReportingDescriptor struct {
 	ShortDescription     *MultiformatMessageString `json:"shortDescription"`
 	FullDescription      *MultiformatMessageString `json:"fullDescription,omitempty"`
 	DefaultConfiguration *ReportingConfiguration   `json:"defaultConfiguration,omitempty"`
+	DeprecatedIds        []string                  `json:"deprecatedIds,omitempty"`
+	DeprecatedGuids      []string                  `json:"deprecatedGuids,omitempty"`
+	DeprecatedNames      []string                  `json:"deprecatedNames,omitempty"`
 	HelpURI              *string                   `json:"helpUri,omitempty"`
 	Help                 *MultiformatMessageString `json:"help,omitempty"`
+	MessageStrings       *MessageStrings           `json:"messageStrings"`
 	Properties           Properties                `json:"properties,omitempty"`
 }
 
