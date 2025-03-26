@@ -27,7 +27,7 @@ type ReportingDescriptor struct {
 	Help *MultiformatMessageString `json:"help,omitempty"`
 
 	// A URI where the primary documentation for the report can be found.
-	HelpURI *string `json:"helpURI,omitempty"`
+	HelpURI *string `json:"helpUri,omitempty"`
 
 	// A stable, opaque identifier for the report.
 	ID *string `json:"id,omitempty"`
@@ -128,8 +128,8 @@ func (h *ReportingDescriptor) WithHelp(help *MultiformatMessageString) *Reportin
 }
 
 // WithHelpURI - add a HelpURI to the ReportingDescriptor
-func (h *ReportingDescriptor) WithHelpURI(helpURI string) *ReportingDescriptor {
-	h.HelpURI = &helpURI
+func (h *ReportingDescriptor) WithHelpURI(helpUri string) *ReportingDescriptor {
+	h.HelpURI = &helpUri
 	return h
 }
 

@@ -15,7 +15,7 @@ type VersionControlDetails struct {
 	Properties *PropertyBag `json:"properties,omitempty"`
 
 	// The absolute URI of the repository.
-	RepositoryURI *string `json:"repositoryURI,omitempty"`
+	RepositoryURI *string `json:"repositoryUri,omitempty"`
 
 	// A string that uniquely and permanently identifies the revision within the repository.
 	RevisionID *string `json:"revisionId,omitempty"`
@@ -54,8 +54,8 @@ func (p *VersionControlDetails) WithProperties(properties *PropertyBag) *Version
 }
 
 // WithRepositoryURI - add a RepositoryURI to the VersionControlDetails
-func (r *VersionControlDetails) WithRepositoryURI(repositoryURI string) *VersionControlDetails {
-	r.RepositoryURI = &repositoryURI
+func (r *VersionControlDetails) WithRepositoryURI(repositoryUri string) *VersionControlDetails {
+	r.RepositoryURI = &repositoryUri
 	return r
 }
 

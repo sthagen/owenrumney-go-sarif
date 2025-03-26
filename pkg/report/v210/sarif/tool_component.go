@@ -15,7 +15,7 @@ type ToolComponent struct {
 	DottedQuadFileVersion *string `json:"dottedQuadFileVersion,omitempty"`
 
 	// The absolute URI from which the tool component can be downloaded.
-	DownloadURI *string `json:"downloadURI,omitempty"`
+	DownloadURI *string `json:"downloadUri,omitempty"`
 
 	// A comprehensive description of the tool component.
 	FullDescription *MultiformatMessageString `json:"fullDescription,omitempty"`
@@ -27,7 +27,7 @@ type ToolComponent struct {
 	GuID *string `json:"guid,omitempty"`
 
 	// The absolute URI at which information about this version of the tool component can be found.
-	InformationURI *string `json:"informationURI,omitempty"`
+	InformationURI *string `json:"informationUri,omitempty"`
 
 	// Specifies whether this object contains a complete definition of the localizable and/or non-localizable data for this component, as opposed to including only data that is relevant to the results persisted to this log file.
 	IsComprehensive bool `json:"isComprehensive,omitempty"`
@@ -138,8 +138,8 @@ func (d *ToolComponent) WithDottedQuadFileVersion(dottedQuadFileVersion string) 
 }
 
 // WithDownloadURI - add a DownloadURI to the ToolComponent
-func (d *ToolComponent) WithDownloadURI(downloadURI string) *ToolComponent {
-	d.DownloadURI = &downloadURI
+func (d *ToolComponent) WithDownloadURI(downloadUri string) *ToolComponent {
+	d.DownloadURI = &downloadUri
 	return d
 }
 
@@ -162,8 +162,8 @@ func (g *ToolComponent) WithGuID(guid string) *ToolComponent {
 }
 
 // WithInformationURI - add a InformationURI to the ToolComponent
-func (i *ToolComponent) WithInformationURI(informationURI string) *ToolComponent {
-	i.InformationURI = &informationURI
+func (i *ToolComponent) WithInformationURI(informationUri string) *ToolComponent {
+	i.InformationURI = &informationUri
 	return i
 }
 
